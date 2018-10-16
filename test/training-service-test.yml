@@ -1,0 +1,56 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+server:
+    port: 8763
+
+ribbon:  
+  ReadTimeout: 6000
+  ConnectTimeout: 6000    
+
+spring:
+  application:
+    name: training-service
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+      enabled: true
+  
+#mybatis
+#entity扫描的包名
+#Mapper.xml所在的位置
+mybatis:
+  type-aliases-package: com.boe.adc.training.pojo
+  mapper-locations: classpath*:mybatis/*Mapper.xml
+ 
+#pagehelper分页插件配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+ftp:
+  host: 192.168.87.18
+  port: 21
+  username: software
+  password: software123
+  rootpath: /software/adc/Root/
+
+#日志配置
+#logging.level.com.xiaolyuh=debug
+#logging.level.org.springframework.web=debug
+#logging.level.org.springframework.transaction=debug
+#logging.level.org.mybatis=debug
+
+logging:
+  level.com.boe: debug
+#  level.org.springframework.web: debug
+#  level.org.springframework.transaction: debug
+#  level.org.mybatis: debug
+  path: logs/
+  file: training-service.log     
+
+#debug: false   

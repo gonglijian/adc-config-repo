@@ -1,0 +1,52 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+server:
+    port: 8762
+
+spring:
+  application:
+    name: chart-service
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+      enabled: true
+  #freemarker:
+    #suffix: .html
+    #request-context-attribute: request
+
+#mybatis
+#entity扫描的包名
+#Mapper.xml所在的位置
+mybatis:
+  type-aliases-package: com.boe.adc.chart.pojo
+  mapper-locations: classpath*:mybatis/*Mapper.xml
+ 
+#pagehelper分页插件配置
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+management:
+  security:
+    enabled: false 
+
+#日志配置
+#logging.level.com.xiaolyuh=debug
+#logging.level.org.springframework.web=debug
+#logging.level.org.springframework.transaction=debug
+#logging.level.org.mybatis=debug
+
+logging:
+  level.com.boe: debug
+#  level.org.springframework.web: debug
+#  level.org.springframework.transaction: debug
+#  level.org.mybatis: debug
+  path: logs/
+  file: chart-service.log     
+
+#debug: false   
