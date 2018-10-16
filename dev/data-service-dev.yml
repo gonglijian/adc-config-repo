@@ -1,0 +1,41 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+ribbon:  
+  ReadTimeout: 6000  
+  ConnectTimeout: 6000
+
+server:
+    port: 8765
+spring:
+    application:
+        name: data-service
+    mail:
+        host: smtp.qq.com
+        username: 492178890@qq.com
+        password: glj@hxy1028
+        default-encoding: UTF-8
+        port: 587
+        fromMail:
+                addr: 492178890@qq.com
+
+n:
+  port: 7000
+  url: 127.0.0.1
+
+thread:
+  pool:
+    corePoolSize: 2
+    maxPoolSize: 4
+    queueCapacity: 4
+
+logging:
+  level.com.boe: debug
+  path: logs/
+  file: data-service.log 
+
+tms:
+  port: 6868
+  url: 192.168.1.107
