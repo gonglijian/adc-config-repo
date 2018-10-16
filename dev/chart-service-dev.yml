@@ -30,7 +30,11 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
- 
+
+management:
+  security:
+    enabled: false 
+
 #日志配置
 #logging.level.com.xiaolyuh=debug
 #logging.level.org.springframework.web=debug
