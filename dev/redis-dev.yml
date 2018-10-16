@@ -2,7 +2,7 @@ spring:
   redis:
     #数据库索引
     database: 0
-    host: 192.168.87.1752323
+    host: 192.168.87.175
     port: 6379
     password: 123456
     jedis:
