@@ -35,7 +35,7 @@ pagehelper:
   params: count=countSql
  
 #日志配置
-logging.level.org.springframework.web=debug
+#logging.level.org.springframework.web=debug
 #logging.level.org.springframework.transaction=debug
 #logging.level.org.mybatis=debug
 
