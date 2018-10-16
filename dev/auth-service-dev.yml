@@ -35,13 +35,12 @@ pagehelper:
   params: count=countSql
  
 #日志配置
-#logging.level.com.xiaolyuh=debug
-#logging.level.org.springframework.web=debug
+logging.level.org.springframework.web=debug
 #logging.level.org.springframework.transaction=debug
 #logging.level.org.mybatis=debug
 
 logging:
-  level.com.boe: debug
+   level.com.boe: debug
 #  level.org.springframework.web: debug
 #  level.org.springframework.transaction: debug
 #  level.org.mybatis: debug
