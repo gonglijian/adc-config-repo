@@ -20,7 +20,7 @@ spring:
         default-encoding: UTF-8
         port: 587
         fromMail:
-                addr: 492178890@qq.com
+            addr: 492178890@qq.com
 
 n:
   port: 7000
